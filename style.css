@@ -5,7 +5,6 @@
 }
 
 :root {
-  /* === WARNA HIJAU (VERSI PERTAMA) === */
   --hijau-tua:      #0a3d2e;
   --hijau-mid:      #155740;
   --hijau-aksen:    #1a7a56;
@@ -29,11 +28,11 @@ body {
   line-height: 1.6;
 }
 
-a { text-decoration: none; transition: all 0.2s ease; }
+a { 
+  text-decoration: none; 
+  transition: all 0.2s ease; 
+}
 
-/* =============================================
-   TOP BAR
-   ============================================= */
 .topbar {
   background: var(--hijau-tua);
   padding: 8px 64px;
@@ -84,9 +83,6 @@ a { text-decoration: none; transition: all 0.2s ease; }
   background: rgba(255,255,255,0.2);
 }
 
-/* =============================================
-   HEADER
-   ============================================= */
 header {
   background: var(--putih);
   border-bottom: 3px solid var(--emas);
@@ -110,9 +106,6 @@ header {
 .logo-lingkaran {
   width: 60px;
   height: 60px;
-  /*border-radius: 50%;
-  background: var(--hijau-tua);
-  border: 2.5px solid var(--emas);*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,7 +181,6 @@ nav .nav-pmb:hover {
   align-items: center;
 }
 
-/* Dekorasi lingkaran */
 .hero-deko-1 {
   position: absolute;
   top: -80px; right: 380px;
@@ -207,7 +199,6 @@ nav .nav-pmb:hover {
   pointer-events: none;
 }
 
-/* Strip emas kiri */
 .hero-strip {
   position: absolute;
   left: 0; top: 0; bottom: 0;
@@ -215,7 +206,6 @@ nav .nav-pmb:hover {
   background: var(--emas);
 }
 
-/* Layout hero 2 kolom */
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -226,8 +216,6 @@ nav .nav-pmb:hover {
   align-items: center;
 }
 
-/* Kolom kiri — teks */
-/*.hero-teks {} */
 
 .hero-badge {
   display: inline-flex;
@@ -300,7 +288,6 @@ nav .nav-pmb:hover {
   border-color: rgba(255,255,255,0.55);
 }
 
-/* Statistik */
 .hero-statistik {
   display: flex;
   gap: 0;
@@ -331,9 +318,6 @@ nav .nav-pmb:hover {
   letter-spacing: 0.3px;
 }
 
-/* =============================================
-   HERO — KOLOM KANAN (FOTO GEDUNG)
-   ============================================= */
 .hero-foto {
   position: relative;
   height: 420px;
@@ -342,7 +326,6 @@ nav .nav-pmb:hover {
   justify-content: center;
 }
 
-/* Frame dekoratif di belakang foto */
 .hero-foto::before {
   content: '';
   position: absolute;
@@ -353,7 +336,6 @@ nav .nav-pmb:hover {
   z-index: 0;
 }
 
-/* Frame kuning pojok kiri atas */
 .hero-foto::after {
   content: '';
   position: absolute;
@@ -375,7 +357,6 @@ nav .nav-pmb:hover {
   box-shadow: 0 24px 60px rgba(0,0,0,0.35);
 }
 
-/* Overlay gelap tipis agar foto menyatu */
 .hero-foto-frame::after {
   content: '';
   position: absolute;
@@ -396,7 +377,6 @@ nav .nav-pmb:hover {
   display: block;
 }
 
-/* Badge di atas foto */
 .foto-badge {
   position: absolute;
   bottom: -14px;
@@ -413,7 +393,6 @@ nav .nav-pmb:hover {
   white-space: nowrap;
 }
 
-/* Sudut bawah kanan */
 .foto-sudut {
   position: absolute;
   bottom: -8px; right: -8px;
@@ -424,9 +403,6 @@ nav .nav-pmb:hover {
   z-index: 2;
 }
 
-/* =============================================
-   STRIP EMAS INFO
-   ============================================= */
 .strip-emas {
   background: var(--emas);
   padding: 12px 64px;
@@ -453,9 +429,6 @@ nav .nav-pmb:hover {
   flex-shrink: 0;
 }
 
-/* =============================================
-   KONTEN UTAMA — GRID 2 KOLOM
-   ============================================= */
 .konten-utama {
   padding: 72px 64px;
   display: grid;
@@ -465,9 +438,6 @@ nav .nav-pmb:hover {
   margin: 0 auto;
 }
 
-/* =============================================
-   LABEL SEKSI
-   ============================================= */
 .label-seksi {
   display: flex;
   align-items: center;
@@ -491,9 +461,6 @@ nav .nav-pmb:hover {
   color: var(--teks-gelap);
 }
 
-/* =============================================
-   ARTIKEL FEATURED
-   ============================================= */
 .artikel-featured {
   background: var(--putih);
   border-radius: 12px;
@@ -543,7 +510,9 @@ nav .nav-pmb:hover {
   border-radius: 20px;
 }
 
-.artikel-body { padding: 26px 28px; }
+.artikel-body { 
+  padding: 26px 28px; 
+}
 
 .artikel-meta {
   display: flex;
@@ -572,8 +541,12 @@ nav .nav-pmb:hover {
   margin-bottom: 10px;
 }
 
-.artikel-featured h4 a { color: inherit; }
-.artikel-featured h4 a:hover { color: var(--hijau-aksen); }
+.artikel-featured h4 a { 
+  color: inherit; 
+}
+.artikel-featured h4 a:hover { 
+  color: var(--hijau-aksen); 
+}
 
 .artikel-featured p {
   font-size: 14px;
@@ -590,11 +563,11 @@ nav .nav-pmb:hover {
   font-weight: 700;
   color: var(--hijau-aksen);
 }
-.baca-lagi:hover { gap: 10px; color: var(--hijau-tua); }
+.baca-lagi:hover { 
+  gap: 10px; 
+  color: var(--hijau-tua); 
+}
 
-/* =============================================
-   ARTIKEL CARD KECIL
-   ============================================= */
 .artikel-card {
   display: flex;
   gap: 18px;
@@ -634,8 +607,13 @@ nav .nav-pmb:hover {
   margin-bottom: 6px;
 }
 
-.artikel-card h5 a { color: inherit; }
-.artikel-card h5 a:hover { color: var(--hijau-aksen); }
+.artikel-card h5 a { 
+  color: inherit; 
+}
+
+.artikel-card h5 a:hover { 
+  color: var(--hijau-aksen); 
+}
 
 .artikel-card p {
   font-size: 12.5px;
@@ -643,9 +621,6 @@ nav .nav-pmb:hover {
   line-height: 1.6;
 }
 
-/* =============================================
-   SIDEBAR
-   ============================================= */
 .sidebar-kartu {
   background: var(--putih);
   border-radius: 12px;
@@ -678,7 +653,6 @@ nav .nav-pmb:hover {
   color: var(--teks-gelap);
 }
 
-/* Quick Links */
 .quick-link {
   display: flex;
   align-items: center;
@@ -687,11 +661,22 @@ nav .nav-pmb:hover {
   border-bottom: 1px solid rgba(10,61,46,0.05);
   color: var(--teks-gelap);
 }
-.quick-link:last-child { border-bottom: none; }
 
-.quick-link:hover .ql-ikon { background: var(--hijau-tua); }
-.quick-link:hover .ql-ikon svg { stroke: var(--putih); }
-.quick-link:hover .ql-teks { color: var(--hijau-aksen); }
+.quick-link:last-child { 
+  border-bottom: none; 
+}
+
+.quick-link:hover .ql-ikon { 
+  background: var(--hijau-tua); 
+}
+
+.quick-link:hover .ql-ikon i { 
+  stroke: var(--putih); 
+}
+
+.quick-link:hover .ql-teks { 
+  color: var(--hijau-aksen); 
+}
 
 .ql-ikon {
   width: 35px; height: 35px;
@@ -723,14 +708,15 @@ nav .nav-pmb:hover {
   color: var(--teks-redup);
 }
 
-/* ini bagian kontak */
 .kontak-item {
   display: flex;
   gap: 12px;
   margin-bottom: 14px;
   align-items: flex-start;
 }
-.kontak-item:last-child { margin-bottom: 0; }
+.kontak-item:last-child { 
+  margin-bottom: 0; 
+}
 
 .kontak-ikon {
   width: 32px; height: 32px;
@@ -763,8 +749,14 @@ nav .nav-pmb:hover {
   margin-bottom: 2px;
 }
 
-.kontak-teks a { color: var(--hijau-aksen); font-weight: 500; }
-.kontak-teks a:hover { color: var(--hijau-tua); }
+.kontak-teks a { 
+  color: var(--hijau-aksen); 
+  font-weight: 500; 
+}
+
+.kontak-teks a:hover { 
+  color: var(--hijau-tua); 
+}
 
 .btn-pesan {
   display: block;
@@ -777,9 +769,11 @@ nav .nav-pmb:hover {
   font-weight: 700;
   border-radius: 8px;
 }
-.btn-pesan:hover { background: var(--hijau-tua); color: var(--putih); }
 
-/* Kartu PMB */
+.btn-pesan:hover { 
+  background: var(--hijau-tua); 
+  color: var(--putih); }
+
 .kartu-pmb {
   background: var(--hijau-tua);
   border-radius: 12px;
@@ -842,7 +836,9 @@ nav .nav-pmb:hover {
   padding: 10px 20px;
   border-radius: 7px;
 }
-.pmb-tombol a.daftar:hover { background: var(--emas-terang); }
+.pmb-tombol a.daftar:hover { 
+  background: var(--emas-terang); 
+}
 
 .pmb-tombol a.info {
   display: inline-block;
@@ -853,21 +849,30 @@ nav .nav-pmb:hover {
   padding: 10px 18px;
   border-radius: 7px;
 }
+
 .pmb-tombol a.info:hover {
   background: rgba(255,255,255,0.08);
   color: var(--putih);
 }
 
-/* =============================================
-   FOOTER
-   ============================================= */
 .footer-stripe {
   display: flex;
   height: 5px;
 }
-.fs-tua   { background: var(--hijau-tua); flex: 1; }
-.fs-emas  { background: var(--emas); flex: 1; }
-.fs-mid   { background: var(--hijau-aksen); flex: 1; }
+
+.fs-tua   { 
+  background: var(--hijau-tua); 
+  flex: 1; 
+}
+
+.fs-emas  { 
+  background: var(--emas); flex: 1; 
+}
+
+.fs-mid   { 
+  background: var(--hijau-aksen); 
+  flex: 1; 
+}
 
 footer {
   background: var(--hijau-tua);
@@ -903,11 +908,14 @@ footer {
   font-size: 13px;
   color: rgba(255,255,255,0.48);
   line-height: 1.7;
-  max-width: 250px;
+  max-width: 300px;
   margin-bottom: 18px;
 }
 
-.footer-sosial { display: flex; gap: 10px; }
+.footer-sosial { 
+  display: flex; 
+  gap: 10px; 
+}
 
 .sosial-btn {
   width: 34px; height: 34px;
@@ -955,7 +963,10 @@ footer {
     grid-template-columns: 1fr 360px;
     gap: 40px;
   }
-  .hero-teks h2 { font-size: 42px; }
+
+  .hero-teks h2 { 
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -963,24 +974,86 @@ footer {
     padding-left: 32px;
     padding-right: 32px;
   }
-  .hero { padding: 56px 32px 64px; }
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-foto { height: 300px; max-width: 500px; margin: 0 auto; }
-  .konten-utama { grid-template-columns: 1fr; }
-  .footer-atas { grid-template-columns: 1fr 1fr; }
+
+  .hero {
+    padding: 56px 32px 64px;
+  }
+
+  .hero-inner { 
+    grid-template-columns: 1fr; 
+  }
+
+  .hero-foto { height: 300px; 
+    max-width: 500px; 
+    margin: 0 auto; 
+  }
+
+  .konten-utama { 
+    grid-template-columns: 1fr; 
+  }
+
+  .footer-atas { 
+    grid-template-columns: 1fr 1fr; 
+  }
 }
 
 @media (max-width: 640px) {
-  .topbar { flex-direction: column; gap: 8px; padding: 10px 20px; }
-  header { padding: 12px 20px; height: auto; flex-wrap: wrap; gap: 12px; }
-  nav { flex-wrap: wrap; justify-content: center; }
-  .hero { padding: 40px 20px 52px; }
-  .hero-teks h2 { font-size: 32px; }
-  .hero-statistik { flex-wrap: wrap; gap: 20px; }
-  .stat { border-right: none; padding: 0; }
-  .strip-emas { padding: 11px 20px; gap: 24px; }
-  .konten-utama { padding: 40px 20px; }
-  footer { padding: 40px 20px 20px; }
-  .footer-atas { grid-template-columns: 1fr; }
-  .footer-bawah { flex-direction: column; gap: 8px; text-align: center; }
+  .topbar {
+    flex-direction: column;
+    gap: 8px; 
+    padding: 10px 20px;
+  }
+
+  header {
+    padding: 12px 20px; 
+    height: auto; 
+    flex-wrap: wrap; 
+    gap: 12px; 
+  }
+
+  nav {
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+  .hero { 
+    padding: 40px 20px 52px; 
+  }
+
+  .hero-teks h2 { 
+    font-size: 32px; 
+  }
+
+  .hero-statistik { 
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+
+  .stat { 
+    border-right: none; 
+    padding: 0; 
+  }
+
+  .strip-emas { 
+    padding: 11px 20px; 
+    gap: 24px; 
+  }
+
+  .konten-utama { 
+    padding: 40px 20px; 
+  }
+
+  footer { 
+    padding: 40px 20px 20px; 
+  }
+
+  .footer-atas { 
+    grid-template-columns: 1fr; 
+  }
+
+  .footer-bawah { 
+    flex-direction: column; 
+    gap: 8px; 
+    text-align: center; 
+  }
 }
