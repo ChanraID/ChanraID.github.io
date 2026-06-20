@@ -687,7 +687,7 @@ nav .nav-pmb:hover {
   transition: background 0.2s;
 }
 
-.ql-ikon svg {
+.ql-ikon i {
   width: 15px; height: 15px;
   stroke: var(--hijau-aksen);
   stroke-width: 2;
