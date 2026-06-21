@@ -28,6 +28,17 @@ body {
   line-height: 1.6;
 }
 
+.hidden{
+    opacity:0;
+    transform:translateY(30px);
+    transition:.8s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
 a { 
   text-decoration: none; 
   transition: all 0.2s ease; 
@@ -94,7 +105,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 20px rgba(10, 61, 46, 0.08);
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .logo-area {
@@ -214,6 +230,26 @@ nav .nav-pmb:hover {
   grid-template-columns: 1fr 460px;
   gap: 56px;
   align-items: center;
+}
+
+.fade-left,
+.fade-right {
+  opacity: 0;
+}
+
+.fade-left {
+  transform: translateX(-40px);
+}
+
+.fade-right {
+  transform: translateX(40px);
+}
+
+.fade-left.show,
+.fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.8s ease;
 }
 
 
