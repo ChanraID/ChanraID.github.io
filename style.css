@@ -5,38 +5,27 @@
 }
 
 :root {
-  --hijau-tua:      #0a3d2e;
-  --hijau-mid:      #155740;
-  --hijau-aksen:    #1a7a56;
-  --hijau-muda:     #e8f5ee;
+  --biru-tua:      #102a4c;
+  --biru-mid:      #1e4e8c;
+  --biru-aksen:    #4f7bb7;
+  --biru-muda:     #e7f0fb;
 
-  --emas:           #c9a84c;
-  --emas-terang:    #f0dfa0;
-  --emas-muda:      #fdf8ec;
+  --emas:           #c8b08a;
+  --emas-terang:    #E2D2B5;
+  --emas-muda:      #F8F4EC;
 
   --putih:          #ffffff;
-  --krem:           #faf8f3;
-  --teks-gelap:     #0d2318;
-  --teks-sedang:    #2e5c42;
-  --teks-redup:     #7a9a85;
+  --krem:           #F5F2ED;
+  --teks-gelap:     #1F2937;
+  --teks-sedang:    #6B7280;
+  --teks-redup:     #9CA3AF;
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   background: var(--krem);
   color: var(--teks-gelap);
   line-height: 1.6;
-}
-
-.hidden{
-    opacity:0;
-    transform:translateY(30px);
-    transition:.8s;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
 }
 
 a { 
@@ -45,12 +34,12 @@ a {
 }
 
 .topbar {
-  background: var(--hijau-tua);
+  background: var(--biru-tua);
   padding: 8px 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .topbar-kiri {
@@ -98,7 +87,7 @@ header {
   background: var(--putih);
   border-bottom: 3px solid var(--emas);
   padding: 0 64px;
-  height: 88px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,8 +109,8 @@ header.scrolled {
 }
 
 .logo-lingkaran {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,16 +119,16 @@ header.scrolled {
 }
 
 .logo-lingkaran img {
-  width: 46px;
-  height: 46px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
 }
 
 .logo-teks h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
   font-size: 19px;
   font-weight: 700;
-  color: var(--hijau-tua);
+  color: var(--biru-tua);
   line-height: 1.1;
 }
 
@@ -168,12 +157,12 @@ nav a {
 }
 
 nav a:hover {
-  background: var(--hijau-muda);
-  color: var(--hijau-tua);
+  background: var(--biru-muda);
+  color: var(--biru-tua);
 }
 
 nav .nav-pmb {
-  background: var(--hijau-tua);
+  background: var(--biru-tua);
   color: var(--putih) !important;
   font-weight: 700;
   padding: 9px 18px;
@@ -183,12 +172,29 @@ nav .nav-pmb {
 }
 
 nav .nav-pmb:hover {
-  background: var(--hijau-mid);
+  background: var(--biru-mid);
+}
+
+nav a.active {
+  color: var(--biru-tua);
+  font-weight: 700;
+  position: relative;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: -8px;
+  height: 3px;
+  background: var(--emas);
+  border-radius: 99px;
 }
 
 
 .hero {
-  background: linear-gradient(135deg, var(--hijau-tua) 0%, var(--hijau-mid) 65%, var(--hijau-aksen) 100%);
+  background: linear-gradient(135deg, var(--biru-tua) 0%, var(--biru-mid) 65%, var(--biru-aksen) 100%);
   padding: 72px 64px 80px;
   position: relative;
   overflow: hidden;
@@ -232,8 +238,7 @@ nav .nav-pmb:hover {
   align-items: center;
 }
 
-.fade-left,
-.fade-right {
+.fade-left,.fade-right {
   opacity: 0;
 }
 
@@ -245,8 +250,7 @@ nav .nav-pmb:hover {
   transform: translateX(40px);
 }
 
-.fade-left.show,
-.fade-right.show {
+.fade-left.show, .fade-right.show {
   opacity: 1;
   transform: translateX(0);
   transition: all 0.8s ease;
@@ -273,7 +277,7 @@ nav .nav-pmb:hover {
 }
 
 .hero-teks h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
   font-size: 52px;
   font-weight: 700;
   color: var(--putih);
@@ -302,14 +306,14 @@ nav .nav-pmb:hover {
 
 .btn-emas {
   background: var(--emas);
-  color: var(--hijau-tua);
+  color: var(--biru-tua);
   padding: 13px 28px;
   border-radius: 7px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
-.btn-emas:hover { background: var(--emas-terang); color: var(--hijau-tua); }
+.btn-emas:hover { background: var(--emas-terang); color: var(--biru-tua); }
 
 .btn-outline {
   border: 1.5px solid rgba(255,255,255,0.3);
@@ -340,7 +344,7 @@ nav .nav-pmb:hover {
 .stat:last-child { border-right: none; }
 
 .stat-angka {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
   font-size: 34px;
   font-weight: 700;
   color: var(--emas-terang);
@@ -418,8 +422,8 @@ nav .nav-pmb:hover {
   bottom: -14px;
   right: 20px;
   background: var(--emas);
-  color: var(--hijau-tua);
-  font-size: 11px;
+  color: var(--biru-tua);
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 18px;
@@ -449,9 +453,9 @@ nav .nav-pmb:hover {
 }
 
 .strip-item {
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--hijau-tua);
+  color: var(--biru-tua);
   letter-spacing: 1.2px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -459,7 +463,7 @@ nav .nav-pmb:hover {
 
 .strip-titik {
   width: 5px; height: 5px;
-  background: var(--hijau-tua);
+  background: var(--biru-tua);
   border-radius: 50%;
   opacity: 0.4;
   flex-shrink: 0;
@@ -491,7 +495,7 @@ nav .nav-pmb:hover {
 }
 
 .label-seksi h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
   font-size: 27px;
   font-weight: 600;
   color: var(--teks-gelap);
@@ -516,7 +520,7 @@ nav .nav-pmb:hover {
   height: 250px;
   position: relative;
   overflow: hidden;
-  background: var(--hijau-mid);
+  background: var(--biru-mid);
 }
 
 .artikel-gambar img {
@@ -537,7 +541,7 @@ nav .nav-pmb:hover {
   bottom: 16px; left: 16px;
   z-index: 1;
   background: var(--emas);
-  color: var(--hijau-tua);
+  color: var(--biru-tua);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.2px;
@@ -569,7 +573,7 @@ nav .nav-pmb:hover {
 }
 
 .artikel-featured h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
   font-size: 22px;
   font-weight: 600;
   color: var(--teks-gelap);
@@ -581,7 +585,7 @@ nav .nav-pmb:hover {
   color: inherit; 
 }
 .artikel-featured h4 a:hover { 
-  color: var(--hijau-aksen); 
+  color: var(--biru-aksen); 
 }
 
 .artikel-featured p {
@@ -597,11 +601,11 @@ nav .nav-pmb:hover {
   gap: 6px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--hijau-aksen);
+  color: var(--biru-aksen);
 }
 .baca-lagi:hover { 
   gap: 10px; 
-  color: var(--hijau-tua); 
+  color: var(--biru-tua); 
 }
 
 .artikel-card {
@@ -626,7 +630,7 @@ nav .nav-pmb:hover {
   border-radius: 8px;
   flex-shrink: 0;
   overflow: hidden;
-  background: var(--hijau-muda);
+  background: var(--biru-muda);
 }
 
 .artikel-card-thumb img {
@@ -648,7 +652,7 @@ nav .nav-pmb:hover {
 }
 
 .artikel-card h5 a:hover { 
-  color: var(--hijau-aksen); 
+  color: var(--biru-aksen); 
 }
 
 .artikel-card p {
@@ -703,7 +707,7 @@ nav .nav-pmb:hover {
 }
 
 .quick-link:hover .ql-ikon { 
-  background: var(--hijau-tua); 
+  background: var(--biru-tua); 
 }
 
 .quick-link:hover .ql-ikon i { 
@@ -711,12 +715,12 @@ nav .nav-pmb:hover {
 }
 
 .quick-link:hover .ql-teks { 
-  color: var(--hijau-aksen); 
+  color: var(--biru-aksen); 
 }
 
 .ql-ikon {
   width: 35px; height: 35px;
-  background: var(--hijau-muda);
+  background: var(--biru-muda);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -725,7 +729,7 @@ nav .nav-pmb:hover {
 
 .ql-ikon i {
   width: 15px; height: 15px;
-  stroke: var(--hijau-aksen);
+  stroke: var(--biru-aksen);
   stroke-width: 2;
   fill: none;
   transition: stroke 0.2s;
@@ -756,7 +760,7 @@ nav .nav-pmb:hover {
 
 .kontak-ikon {
   width: 32px; height: 32px;
-  background: var(--hijau-muda);
+  background: var(--biru-muda);
   border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -764,7 +768,7 @@ nav .nav-pmb:hover {
 
 .kontak-ikon svg {
   width: 14px; height: 14px;
-  stroke: var(--hijau-aksen);
+  stroke: var(--biru-aksen);
   stroke-width: 2;
   fill: none;
 }
@@ -786,12 +790,12 @@ nav .nav-pmb:hover {
 }
 
 .kontak-teks a { 
-  color: var(--hijau-aksen); 
+  color: var(--biru-aksen); 
   font-weight: 500; 
 }
 
 .kontak-teks a:hover { 
-  color: var(--hijau-tua); 
+  color: var(--biru-tua); 
 }
 
 .btn-pesan {
@@ -799,19 +803,19 @@ nav .nav-pmb:hover {
   text-align: center;
   margin-top: 18px;
   padding: 11px;
-  background: var(--hijau-muda);
-  color: var(--hijau-tua);
+  background: var(--biru-muda);
+  color: var(--biru-tua);
   font-size: 13px;
   font-weight: 700;
   border-radius: 8px;
 }
 
 .btn-pesan:hover { 
-  background: var(--hijau-tua); 
+  background: var(--biru-tua); 
   color: var(--putih); }
 
 .kartu-pmb {
-  background: var(--hijau-tua);
+  background: var(--biru-tua);
   border-radius: 12px;
   padding: 26px;
   position: relative;
@@ -841,7 +845,7 @@ nav .nav-pmb:hover {
 }
 
 .kartu-pmb h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   color: var(--putih);
   margin-bottom: 8px;
@@ -866,7 +870,7 @@ nav .nav-pmb:hover {
 .pmb-tombol a.daftar {
   display: inline-block;
   background: var(--emas);
-  color: var(--hijau-tua);
+  color: var(--biru-tua);
   font-size: 12.5px;
   font-weight: 700;
   padding: 10px 20px;
@@ -897,7 +901,7 @@ nav .nav-pmb:hover {
 }
 
 .fs-tua   { 
-  background: var(--hijau-tua); 
+  background: var(--biru-tua); 
   flex: 1; 
 }
 
@@ -906,12 +910,12 @@ nav .nav-pmb:hover {
 }
 
 .fs-mid   { 
-  background: var(--hijau-aksen); 
+  background: var(--biru-aksen); 
   flex: 1; 
 }
 
 footer {
-  background: var(--hijau-tua);
+  background: var(--biru-tua);
   padding: 56px 64px 24px;
 }
 
@@ -924,7 +928,7 @@ footer {
 }
 
 .footer-brand h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
   font-size: 21px;
   color: var(--putih);
   margin-bottom: 4px;
@@ -962,7 +966,7 @@ footer {
   color: rgba(255,255,255,0.55);
   font-weight: 700;
 }
-.sosial-btn:hover { background: var(--emas); color: var(--hijau-tua); }
+.sosial-btn:hover { background: var(--emas); color: var(--biru-tua); }
 
 .footer-kolom h4 {
   font-size: 11px;

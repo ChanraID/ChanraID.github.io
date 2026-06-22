@@ -32,6 +32,27 @@ counters.forEach(counter => {
     updateCounter();
 });
 
+const counters1 = document.querySelectorAll(".persen");
+
+counters1.forEach(counter => {
+    const target = parseInt(counter.dataset.target);
+    let current = 0;
+    const updateCounter = () => {
+        const increment = Math.ceil(target / 100);
+        if (current < target) {
+            current += increment;
+            if (current > target) {
+                current = target;
+            }
+            counter.textContent = current + "%";
+            requestAnimationFrame(updateCounter);
+        } else {
+            counter.textContent = target + "%";
+        }
+    };
+    updateCounter();
+});
+
 window.addEventListener("load", () => {
     document
         .querySelector(".fade-left")
@@ -39,4 +60,16 @@ window.addEventListener("load", () => {
     document
         .querySelector(".fade-right")
         ?.classList.add("show");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("nav a:not(.nav-pmb)");
+
+    links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+    });
 });
