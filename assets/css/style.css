@@ -1490,11 +1490,6 @@ footer {
   color: #333;
 }
 
-/* ========================================================== */
-/* TRIK CSS UNTUK MENYAMBUNGKAN GARIS EMAS/COKELAT            */
-/* ========================================================== */
-
-/* 1. Garis vertikal lurus ke bawah dari Kepala Sekolah */
 .root-row::after {
   content: '';
   position: absolute;
@@ -1506,12 +1501,10 @@ footer {
   z-index: 1;
 }
 
-/* 2. Garis horizontal panjang di atas baris para Wakasek */
 .branch-row::before {
   content: '';
   position: absolute;
   top: -20px;
-  /* Membuat garis membentang dari tengah kolom pertama ke tengah kolom terakhir */
   left: 16.66%; 
   right: 16.66%;
   height: 2px;
@@ -1519,7 +1512,6 @@ footer {
   z-index: 1;
 }
 
-/* 3. Garis vertikal pendek untuk menyambungkan dari garis horizontal ke atas setiap Wakasek */
 .chart-branch::before {
   content: '';
   position: absolute;
@@ -1530,11 +1522,10 @@ footer {
   z-index: 1;
 }
 
-/* 4. Garis vertikal penghubung antara Wakasek ke Staff di bawahnya */
 .chart-branch::after {
   content: '';
   position: absolute;
-  top: 40px; /* Menyesuaikan posisi dari bawah kotak Wakasek */
+  top: 40px;
   bottom: 20px;
   width: 2px;
   background-color: #8c734b;
