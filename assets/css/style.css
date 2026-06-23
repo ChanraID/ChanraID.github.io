@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Merriweather', serif;
   background: var(--krem);
   color: var(--teks-gelap);
   line-height: 1.6;
@@ -1259,7 +1259,7 @@ footer {
 .profil-grid img{
   width: 100%;
   height: 100%;
-  object-fit: #d1cfc7;
+  object-fit: cover;
 }
 
 .konten-sambutan {
@@ -1532,6 +1532,39 @@ footer {
   z-index: 1;
 }
 
+.stats-keterangan{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
+  gap : 10px;
+  margin-bottom: 15px;
+}
+
+.stat-box-ket{
+  background-color: var(--biru-mid);
+  border-radius : 12px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.stat-box-ket h3{
+  font-size : 23px;
+  color : var(--emas);
+  margin : 0 0 5px 0;
+  font-weight: 500;
+  line-height: 1.1;
+  padding-bottom: 7px;
+}
+
+.stat-box-ket p{
+  font-size :14px;
+  color : var(--krem);
+  margin : 0;
+  line-height: 2px;
+}
+
+
 .guru-grid{
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
@@ -1542,7 +1575,13 @@ footer {
   background-color: white;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.guru-card:hover{
+  transform: translateY(-4px);
 }
 
 .guru-card img{
@@ -1556,6 +1595,28 @@ footer {
 }
 
 .guru-card span{
+  font-size: 14px;
   padding: 0 15px 20px;
   display: block;
+}
+
+.btn-guru button{
+  display: block;
+  width: max-content;
+  margin: 30px auto;
+  text-decoration: none;
+  color : var(--teks-gelap);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  padding : 12px;
+  font-family: 'Merriweather', serif;
+  border-radius: 12px;
+  background-color: none;
+  border-color: var(--teks-gelap);
+  transition: 0.3s;
+}
+
+.btn-guru button:hover{
+  transform: translateY(-5px);
 }
