@@ -1014,15 +1014,15 @@ footer {
     padding-left: 32px;
     padding-right: 32px;
   }
-
+  
   .hero {
     padding: 56px 32px 64px;
   }
-
+  
   .hero-inner { 
     grid-template-columns: 1fr; 
   }
-
+  
   .hero-foto { height: 300px; 
     max-width: 500px; 
     margin: 0 auto; 
@@ -1031,7 +1031,7 @@ footer {
   .konten-utama { 
     grid-template-columns: 1fr; 
   }
-
+  
   .footer-atas { 
     grid-template-columns: 1fr 1fr; 
   }
@@ -1043,32 +1043,32 @@ footer {
     gap: 8px; 
     padding: 10px 20px;
   }
-
+  
   header {
     padding: 12px 20px; 
     height: auto; 
     flex-wrap: wrap; 
     gap: 12px; 
   }
-
+  
   nav {
     flex-wrap: wrap; 
     justify-content: center; 
   }
-
+  
   .hero { 
     padding: 40px 20px 52px; 
   }
-
+  
   .hero-teks h2 { 
     font-size: 32px; 
   }
-
+  
   .hero-statistik { 
     flex-wrap: wrap; 
     gap: 20px; 
   }
-
+  
   .stat { 
     border-right: none; 
     padding: 0; 
@@ -1078,22 +1078,366 @@ footer {
     padding: 11px 20px; 
     gap: 24px; 
   }
-
+  
   .konten-utama { 
     padding: 40px 20px; 
   }
-
+  
   footer { 
     padding: 40px 20px 20px; 
   }
-
+  
   .footer-atas { 
     grid-template-columns: 1fr; 
   }
-
+  
   .footer-bawah { 
     flex-direction: column; 
     gap: 8px; 
     text-align: center; 
   }
+
+  /*Bagian Profil ya chan!*/
+  .profil-grid{
+    grid-template-columns:1fr;
+  }
+
+  .tab-buttons{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:8px;
+  }
+
+  .tab-btn{
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+
+}
+
+/*Bagian PROFIL CHAN!!! INGET YAA*/
+
+.profil-inner{
+  background: linear-gradient(135deg, var(--biru-tua) 0%, var(--biru-mid) 65%, var(--biru-aksen) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px 0px 70px;
+  overflow: hidden;
+  min-height: 150px;
+  position: relative;
+}
+
+.profil-teks{
+  color: white;
+  z-index: 2;
+}
+
+.profil-teks h1{
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-family:'Merriweather', serif;
+}
+
+.kembali{
+  display: flex;
+  gap: 10px;
+}
+
+.kembali a, .profil-teks p, .kembali{
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  color: var(--teks-redup)
+}
+
+.profil-foto{
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top:0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.profil-foto-frame{
+  height: 100%;
+  width: 100%;
+}
+
+.profil-foto img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  mask-image: linear-gradient(to right, transparent 0%, black 40%);
+}
+
+.profil-section{
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 70px;
+}
+
+.tab-button{
+  display : flex;
+  gap:12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab-btn{
+  padding:14px 22px;
+  border: none;
+  cursor : pointer;
+  border-radius: 10px;
+  background: #ffffff;
+  color : #0f2f5f;
+  font-weight: 600;
+  transition: 0.3s;
+  border : 1px solid #d8d8d8;
+}
+
+.tab-btn:hover{
+  transform: translateY(-2px);
+}
+
+.tab-btn.active{
+  background: #0f2f5f;
+  color : white;
+}
+
+.tab-wrapper{
+  position:relative;
+}
+
+.tab-content{
+  display:none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide .45s ease forwards;
+  /*background-color: var(--putih);*/
+  border-radius: 15px;
+}
+
+.tab-content.active{
+  display:block;
+}
+
+@keyframes fadeSlide{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.card-sambutan{
+  background-color: var(--putih);
+  border: 1px solid var(--krem);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profil-grid{
+  width: 140px;
+  height: 180px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #d1cfc7 ;
+}
+
+.profil-grid img{
+  width: 100%;
+  height: 100%;
+  object-fit: #d1cfc7;
+}
+
+.konten-sambutan {
+  display: flex;
+  flex-direction: column;
+  gap : 12px;
+}
+
+.badge-jabatan {
+  background: var(--emas-muda);
+  color: var(--emas);
+  font-size :13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+.konten-sambutan h2{
+  font-size : 24px;
+  color : black;
+  margin : 0;
+  font-family: 'Merriweather', serif;
+}
+
+.konten-sambutan p{
+  font-size : 15px;
+  line-height: 1.6;
+  color : #333333;
+  margin : 0;
+}
+
+.signature {
+  font-size: 15px;
+  font-style: italic;
+  color : #8c734b;
+  margin-top: 10px;
+}
+.struktur-img{
+  width: 100%;
+  max-width: 900px;
+}
+
+.visi-m{
+  background-color: var(--biru-mid);
+  border: 1px solid var(--biru-aksen);
+  color : white;
+  border-radius: 16px;
+  padding : 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+}
+
+.visi-m h2, .misi h2{
+  color: var(--emas);
+  font-size: 27px;
+}
+
+.misi{
+  background-color: var(--putih);
+  color : black;
+  border-radius: 16px;
+  padding : 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Merriweather', serif;
+  margin-top: 30px;
+  font-size : 17px;
+}
+
+.misi span{
+  background-color: var(--emas);
+  border-radius: 50%;
+  display :inline-block;
+  width : 25px;
+  height: 25px;
+  text-align: center;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+
+}
+
+.card-sejarah{
+  background-color: var(--putih);
+  border: 1px solid var(--krem);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sejarah-banner {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--biru-muda);
+}
+
+.sejarah-banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-sejarah{
+  background-color: var(--krem);
+  color : var(--emas);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.sejarah-teks p{
+  font-size : 15px;
+  line-height: 1.6;
+  color : #222222;
+  margin-top: 0;
+}
+
+.sejarah-stats{
+  display : grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.stat-box{
+  background-color: var(--krem);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-box h3{
+  font-size : 28px;
+  color : var(--biru-tua);
+  margin : 0 0 5px 0;
+  font-weight: 700;
+}
+
+.stat-box p {
+  font-size: 13px;
+  color : #111111;
+  margin : 0;
+  font-weight: 500;
+}
+
+.guru-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
+  gap:25px;
+}
+
+.guru-card{
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.guru-card img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.guru-card h4{
+  padding: 15px 15px 5px;
+}
+
+.guru-card span{
+  padding: 0 15px 20px;
+  display: block;
 }
