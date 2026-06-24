@@ -14,6 +14,10 @@
   --emas-terang:    #E2D2B5;
   --emas-muda:      #F8F4EC;
 
+  --hijau-gelap:    #14251f;
+  --hijau-mid:      #3d6b56;
+  --hijau-aksen:    #6cc19b;
+
   --putih:          #ffffff;
   --krem:           #F5F2ED;
   --teks-gelap:     #1F2937;
@@ -445,7 +449,7 @@ nav a.active::after {
 
 .strip-emas {
   background: var(--emas);
-  padding: 12px 64px;
+  padding: 12px 38px;
   display: flex;
   gap: 36px;
   align-items: center;
@@ -1623,14 +1627,14 @@ footer {
 
 /*Bagian Kegiatan ya chan, awas susah nyari nya*/
 
-.grid-akademik, .section-ekskul {
+.grid-akademik, .section-ekskul, .grid-fasilitas {
   display : grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr) );
+  grid-template-columns: repeat(3,minmax(300px, 1fr) );
   gap : 20px;
   padding : 10px 0;
 }
 
-.card-unggulan, .card-eskul {
+.card-unggulan, .card-eskul, .card-fa-akademik {
   background-color: var(--putih);
   border-radius: 16px;
   overflow: hidden;
@@ -1641,25 +1645,25 @@ footer {
   height: 100%;
 }
 
-.card-unggulan:hover, .card-eskul:hover {
+.card-unggulan:hover, .card-eskul:hover, .card-fa-akademik:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
-.card-unggulan img, .card-eskul img{
+.card-unggulan img, .card-eskul img, .card-fa-akademik img{
   width: 100%;
   height: 180px;
   object-fit:inherit;
   border-bottom: 4px solid var(--biru-aksen);
 }
 
-.card-unggulan h3, .card-eskul h3{
+.card-unggulan h3, .card-eskul h3, .card-fa-akademik h3{
   font-size : 20px;
   padding: 15px 15px 5px;
   text-align: left;
 }
 
-.card-unggulan p{
+.card-unggulan p, .card-fa-akademik p{
   font-size : 16px;
   padding: 0px 15px 15px;
 }
@@ -1691,4 +1695,72 @@ footer {
   padding: 2px 0 2px 15px;
   text-align: left;
   position :  relative;
+}
+
+/*Bagian Fasilitas ya channn!!*/
+
+.section-label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-label::before{
+  content: ' ';
+  display: block;
+  width: 4px;
+  height: 22px;
+  background: var(--emas);
+  border-radius: 2px;
+}
+
+.section-label h2{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--teks-gelap)
+}
+
+.card-fa-akademik {
+  position: relative;
+  display: block;
+}
+
+.badge-fasilitas{
+  position: absolute;
+  top: 10px;
+  color: var(--biru-muda);
+  background-color: var(--biru-tua);
+  left : 10px;
+  z-index: 10;
+  font-size: 14px;
+  padding: 4px 12px;
+  border: 16px;
+  border-radius: 16px;
+}
+
+.badge-fasilitas-olah{
+  position: absolute;
+  top: 10px;
+  color: var(--teks-gelap);
+  background-color: var(--emas);
+  left : 10px;
+  z-index: 10;
+  font-size: 14px;
+  padding: 4px 12px;
+  border: 16px;
+  border-radius: 16px;
+}
+
+.badge-fasilitas-sebu{
+  position: absolute;
+  top: 10px;
+  color: var(--biru-tua);
+  background-color: var(--emas-muda);
+  left : 10px;
+  z-index: 10;
+  font-size: 14px;
+  padding: 4px 12px;
+  border: 16px;
+  border-radius: 16px;
 }
