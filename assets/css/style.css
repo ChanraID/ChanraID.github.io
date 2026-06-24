@@ -1535,7 +1535,7 @@ footer {
 .stats-keterangan{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
-  gap : 10px;
+  gap : 20px;
   margin-bottom: 15px;
 }
 
@@ -1619,4 +1619,76 @@ footer {
 
 .btn-guru button:hover{
   transform: translateY(-5px);
+}
+
+/*Bagian Kegiatan ya chan, awas susah nyari nya*/
+
+.grid-akademik, .section-ekskul {
+  display : grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr) );
+  gap : 20px;
+  padding : 10px 0;
+}
+
+.card-unggulan, .card-eskul {
+  background-color: var(--putih);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-unggulan:hover, .card-eskul:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card-unggulan img, .card-eskul img{
+  width: 100%;
+  height: 180px;
+  object-fit:inherit;
+  border-bottom: 4px solid var(--biru-aksen);
+}
+
+.card-unggulan h3, .card-eskul h3{
+  font-size : 20px;
+  padding: 15px 15px 5px;
+  text-align: left;
+}
+
+.card-unggulan p{
+  font-size : 16px;
+  padding: 0px 15px 15px;
+}
+
+.badge-item-aka{
+  display: flex;
+  gap: 8px;
+  margin: auto 0 12px 12px;
+}
+
+.card-unggulan span, .card-eskul span{
+  background-color: var(--biru-muda);
+  color: var(--biru-aksen);
+  font-size: 14px;
+  padding: 4px 12px;
+  border: 16px;
+  border-radius: 16px;
+}
+
+.card-eskul ul{
+  list-style-type: none;
+  padding-bottom: 12px;
+  margin: 0;
+}
+
+.card-eskul ul li{
+  font-size: 16px;
+  color: var(--teks-gelap);
+  padding: 2px 0 2px 15px;
+  text-align: left;
+  position :  relative;
 }

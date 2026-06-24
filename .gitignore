@@ -1,23 +1,2 @@
-# ==========================================
-# 1. KONFIGURASI EDITOR (Sangat Penting!)
-# ==========================================
-.vscode/                  # Mengabaikan folder pengaturan internal VS Code milikmu
-.idea/                    # Mengabaikan folder setting jika pakai PHPStorm / WebStorm
-*.swp                     # File sementara dari text editor
-
-# ==========================================
-# 2. FILE SISTEM OPERASI (Sampah Otomatis)
-# ==========================================
-.DS_Store                 # File sampah otomatis jika kamu/orang lain buka folder di Mac
-Thumbs.db                 # File sampah otomatis cache gambar di Windows
-
-# ==========================================
-# 3. FILE CATATAN ERROR & DATA SENSITIF
-# ==========================================
-*.log                     # Mengabaikan file log / catatan error otomatis
-.env                      # Mengabaikan file rahasia (seperti password database nantinya)
-
-# ==========================================
-# 4. DATA SEMENTARA / CORETAN (Opsional)
-# ==========================================
-*.txt                     # Jika kamu punya file coretan teks (seperti latarbelakang.txt) dan tak ingin di-upload
+ai.html
+assets/latar-belakang.txt
