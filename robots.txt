@@ -1,0 +1,27 @@
+# Robots.txt untuk SMA Cakrawala Utama
+# Memungkinkan semua search engine robot mengakses situs
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://cakrawalautama.sch.id/sitemap.xml
+
+# Crawl delay (optional - untuk menghindari beban server)
+# Uncomment jika diperlukan
+# Crawl-delay: 1
+
+# Disallow specific directories jika diperlukan (uncomment untuk menggunakan)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# Specific rules untuk Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules untuk Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
