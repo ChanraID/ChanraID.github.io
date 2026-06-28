@@ -3,12 +3,42 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi SMA Cakrawala Utama - Alamat, telepon, email, dan formulir kontak untuk informasi lebih lanjut tentang sekolah.">
+    <meta name="keywords" content="Hubungi, Kontak, Alamat, Telepon, Email, Informasi Sekolah">
+    <meta name="author" content="SMA Cakrawala Utama">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SMA Cakrawala Utama - Hubungi Kami">
+    <meta property="og:description" content="Hubungi kami melalui berbagai saluran komunikasi untuk mendapatkan informasi tentang SMA Cakrawala Utama.">
+    <meta property="og:image" content="/assets/images/pages/logo.png">
+    <meta property="og:url" content="https://cakrawalautama.sch.id/hubungi.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hubungi SMA Cakrawala Utama">
+    <meta name="twitter:description" content="Hubungi kami untuk informasi lebih lanjut.">
+    <meta name="twitter:image" content="/assets/images/pages/logo.png">
+    
     <title>SMA Cakrawala Utama - Hubungi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/jpeg" href="/assets/images/pages/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Schema.org Organization Contact Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+62-822-1234-5678",
+      "email": "info.sma@cakrawalautama.sch.id",
+      "areaServed": "KR",
+      "availableLanguage": "id"
+    }
+    </script>
 </head>
 
 <body>
@@ -49,8 +79,27 @@
             <a href="profil.html">Profil</a>
             <a href="akademik.html">Akademik</a>
             <a href="fasilitas.html">Fasilitas</a>
+            <a href="blog.html">Blog</a>
             <a href="hubungi.html">Hubungi Kami</a>
             <a href="pmb.html" class="nav-pmb">PMB 2026 →</a>
+        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-menu" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="akademik.html">Akademik</a>
+            <a href="fasilitas.html">Fasilitas</a>
+            <a href="blog.html">Blog</a>
+            <a href="hubungi.html">Hubungi Kami</a>
+            <a href="pmb.html" class="nav-pmb-mobile">PMB 2026 →</a>
         </nav>
     </header>
 
@@ -194,43 +243,54 @@
                 
                 <div class="section-label" style="margin-top: 25px;"><h2>Kirim Pesan</h2></div>
                 <div class="card-form">
-                <form action="#" method="POST" class="form-pesan">
-                    
-                    <div class="form-group">
-                    <label>Nama Lengkap</label>
-                    <input type="text" placeholder="Masukkan nama lengkap Anda">
+                    <!-- Form Status Messages -->
+                    <div id="formMessage" class="form-message" style="display: none;">
+                        <p id="formMessageText"></p>
                     </div>
 
-                    <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="email@contoh.com">
-                    </div>
+                    <form id="contactForm" action="https://formspree.io/f/xyzyzydq" method="POST" class="form-pesan">
+                        
+                        <div class="form-group">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" name="nama" id="nama" placeholder="Masukkan nama lengkap Anda" required>
+                            <span class="form-error" id="namaError"></span>
+                        </div>
 
-                    <div class="form-group">
-                    <label>No. Telepon / WhatsApp</label>
-                    <input type="text" placeholder="08xx-xxxx-xxxx">
-                    </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" id="email" placeholder="email@contoh.com" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
 
-                    <div class="form-group">
-                    <label>Keperluan</label>
-                    <select>
-                        <option>Informasi PMB 2026</option>
-                        <option>Pertanyaan Umum</option>
-                        <option>Kerja Sama</option>
-                    </select>
-                    </div>
+                        <div class="form-group">
+                            <label>No. Telepon / WhatsApp *</label>
+                            <input type="tel" name="telepon" id="telepon" placeholder="08xx-xxxx-xxxx" required>
+                            <span class="form-error" id="teleponError"></span>
+                        </div>
 
-                    <div class="form-group">
-                    <label>Pesan</label>
-                    <textarea rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label>Keperluan *</label>
+                            <select name="keperluan" id="keperluan" required>
+                                <option value="">-- Pilih Keperluan --</option>
+                                <option value="Informasi PMB 2026">Informasi PMB 2026</option>
+                                <option value="Pertanyaan Umum">Pertanyaan Umum</option>
+                                <option value="Kerja Sama">Kerja Sama</option>
+                            </select>
+                            <span class="form-error" id="keperluanError"></span>
+                        </div>
 
-                    <div class="form-buttons">
-                    <button type="submit" class="btn-kirim">Kirim Pesan &rarr;</button>
-                    <button type="reset" class="btn-reset">Reset</button>
-                    </div>
+                        <div class="form-group">
+                            <label>Pesan *</label>
+                            <textarea name="pesan" id="pesan" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                            <span class="form-error" id="pesanError"></span>
+                        </div>
 
-                </form>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-kirim" id="submitBtn">Kirim Pesan &rarr;</button>
+                            <button type="reset" class="btn-reset">Reset</button>
+                        </div>
+
+                    </form>
                 </div>
 
                 <div class="section-label" style="margin-top: 25px;">
@@ -296,6 +356,11 @@
     </footer>
 
     <script src="/assets/js/script.js"></script>
+
+    <!-- Back-to-Top Button -->
+    <button class="back-to-top" id="backToTopBtn">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     </body>
 </html>

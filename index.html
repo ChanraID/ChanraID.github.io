@@ -3,12 +3,61 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SMA Cakrawala Utama - Sekolah Menengah Atas terkemuka yang berkomitmen membentuk peserta didik unggul dalam akademik, karakter, kepemimpinan, dan teknologi. Lokasi: Seoul.">
+    <meta name="keywords" content="SMA, Sekolah Menengah Atas, Pendidikan, Cakrawala Utama, Seoul">
+    <meta name="author" content="SMA Cakrawala Utama">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SMA Cakrawala Utama - Beranda">
+    <meta property="og:description" content="Sekolah Menengah Atas terkemuka mengukir masa depan generasi muda dengan program akademik unggul.">
+    <meta property="og:image" content="/assets/images/pages/logo.png">
+    <meta property="og:url" content="https://cakrawalautama.sch.id">
+    <meta property="og:site_name" content="SMA Cakrawala Utama">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SMA Cakrawala Utama - Beranda">
+    <meta name="twitter:description" content="Sekolah Menengah Atas terkemuka mengukir masa depan generasi muda.">
+    <meta name="twitter:image" content="/assets/images/pages/logo.png">
+    
     <title>SMA Cakrawala Utama - Beranda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/jpeg" href="/assets/images/pages/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Schema.org Organization Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "SMA Cakrawala Utama",
+      "description": "Sekolah Menengah Atas terkemuka yang berkomitmen membentuk peserta didik unggul dalam akademik, karakter, kepemimpinan, dan teknologi",
+      "url": "https://cakrawalautama.sch.id",
+      "logo": "https://cakrawalautama.sch.id/assets/images/pages/logo.png",
+      "image": "https://cakrawalautama.sch.id/assets/images/pages/logo.png",
+      "telephone": "+62-822-1234-5678",
+      "email": "info.sma@cakrawalautama.sch.id",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "222 Wangsimni-ro",
+        "addressLocality": "Seoul",
+        "addressCountry": "KR"
+      },
+      "sameAs": [
+        "https://facebook.com/smacakrawalautama",
+        "https://instagram.com/smacakrawalautama",
+        "https://tiktok.com/@smacakrawalautama"
+      ],
+      "founder": "SMA Cakrawala Utama",
+      "foundingDate": "2020",
+      "alumni": "Alumnus",
+      "educationalCredentialAwarded": "Ijazah SMA"
+    }
+    </script>
 </head>
 
 <body>
@@ -49,8 +98,27 @@
             <a href="profil.html">Profil</a>
             <a href="akademik.html">Akademik</a>
             <a href="fasilitas.html">Fasilitas</a>
+            <a href="blog.html">Blog</a>
             <a href="hubungi.html">Hubungi Kami</a>
             <a href="pmb.html" class="nav-pmb">PMB 2026 →</a>
+        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-menu" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="akademik.html">Akademik</a>
+            <a href="fasilitas.html">Fasilitas</a>
+            <a href="blog.html">Blog</a>
+            <a href="hubungi.html">Hubungi Kami</a>
+            <a href="pmb.html" class="nav-pmb-mobile">PMB 2026 →</a>
         </nav>
     </header>
 
@@ -358,6 +426,11 @@
     </footer>
 
     <script src="/assets/js/script.js"></script>
+
+    <!-- Back-to-Top Button -->
+    <button class="back-to-top" id="backToTopBtn">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     </body>
 </html>
