@@ -1178,7 +1178,7 @@ footer {
   mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
-.profil-section{
+.profil-section, .hub-section{
   max-width: 1200px;
   margin: 40px auto 80px;
   padding: 0 70px;
@@ -1716,7 +1716,7 @@ footer {
 }
 
 .section-label h2{
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   color: var(--teks-gelap)
 }
@@ -1764,3 +1764,347 @@ footer {
   border: 16px;
   border-radius: 16px;
 }
+
+/*Bagian Hubungi!!*/
+
+.hub-wrapper{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide .45s ease forwards;
+  /*background-color: var(--putih);*/
+  border-radius: 15px;
+}
+.contact-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact-card{
+  background-color: var(--putih);
+  border-radius: 16px;
+  padding: 28px;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+.contact-card:hover{
+  transform:translateY(-6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card:hover .inform-icon{
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.contact-card:hover .garis{
+  width: 60px;
+  height: 5px;
+}
+
+
+.contact-card a{
+  display : flex;
+  align-items: flex-start;
+  gap : 18px;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.inform-icon{
+  flex-shrink:0;
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:32px;
+  position:relative;
+  transition: 0.3 ease;
+}
+
+.kampus{
+  color: #214C9A;
+  background-color: #E8F1FF;
+}
+
+.wa{
+  color: #25D366;
+  background-color: #E8F8EF;
+}
+
+.gmail{
+  color: #C99218;
+  background-color: #FFF6DE;
+}
+
+
+.contact-card{
+  display: flex;
+  align-items: center;
+}
+
+.contact-card a{
+  gap:28px;
+}
+
+.garis{
+  content: "";
+  position: absolute;
+  left: 150px;
+  top: 12px;
+  width: 40px;
+  height: 5px;
+  background: var(--emas-terang);
+  border-radius: 20px;
+}
+
+.inform-teks h3{
+  font-size:20px;
+  color:var(--teks-gelap);
+  font-weight: 600;
+}
+
+.inform-teks p {
+  font-size: 16px;
+  color: var(--teks-gelap);
+  line-height:1.8;
+}
+
+.inform-teks small{
+  font-size: 16px;
+  color: var(--teks-sedang)
+}
+
+.btn-inform-social{
+  position: relative;
+  overflow: hidden;
+  transition: .35s ease;
+}
+
+.btn-inform-social::before{
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -100px;
+  width: 35px;
+  height: 180px;
+  background: rgba(255,255,255,.4);
+  transform: rotate(25deg);
+  transition: .8s ease;
+}
+
+.btn-inform-social:hover::before{
+  left: 130%;
+}
+
+.btn-map{
+  color: #214C9A;
+  background-color: #E8F1FF ;
+  padding: 2px 14px 2px 18px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.btn-map:hover{
+  color: #E8F1FF;
+  background-color: #214C9A;
+}
+
+.btn-email{
+  color: #C99218;
+  background-color: #FFF6DE;
+  padding: 2px 14px 2px 18px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.btn-email:hover{
+  background-color: #C99218;
+  color: #FFF6DE;
+}
+
+.btn-wa{
+  color: #25D366;
+  background-color: #E8F8EF;
+  padding: 2px 14px 2px 18px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.btn-wa:hover{
+  background-color: #25D366;
+  color: #E8F8EF;
+}
+
+.fb{
+  background: #1877F2;
+  color: #FFFFFF;
+}
+
+
+.fb-btn{
+  background: #EEF5FF;
+  color: #1877F2;
+  padding: 2px 0 2px 18px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.fb-btn:hover{
+  background: #1877f2;
+  color:#FFFFFF
+}
+
+.ig{
+  color: #ffffff;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.ig-btn{
+  background: #FFF2F4;
+  color: #E1306C;
+  padding: 2px 0 2px 18px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.ig-btn:hover{
+  background: #E1306C;
+  color:#FFF2F4;
+}
+
+.tt{
+  background: #111111;
+  color: #FFFFFF;
+}
+
+.tt-btn{
+  background: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  color: #111111;
+  padding: 2px 0 2px 18px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.tt-btn:hover{
+  background: #111111;
+  color: #FFFFFF;
+}
+
+.card-sosmed-section, .card-form, .card-lokasi {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.kontak-information {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.sosmed-container {
+  display: flex;
+  gap: 15px;
+}
+
+.sosmed-box {
+  flex: 1;
+  background-color: #f7f6f0;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.sosmed-box strong {
+  display: block;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.sosmed-box span {
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+  color: #a0a0a0;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn-kirim {
+  background-color: #c5a85c; 
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-reset {
+  background-color: transparent;
+  color: #1c2a5e;
+  border: 1px solid #1c2a5e;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  /* font-weight: 600; */
+  font-size: 14px;
+}
+.peta-wrapper {
+  background-color: #cbd8c4;
+  color: #425439;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .kontak-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
