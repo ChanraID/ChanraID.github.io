@@ -94,6 +94,26 @@ tabs.forEach(tab => {
 });
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const targetId = hash.substring(1);
+    const targetButton = document.querySelector(
+        `.tab-btn[data-tab="${targetId}"]`
+    );
+    const targetContent = document.getElementById(targetId);
+    if (targetButton && targetContent) {
+        tabs.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+        targetButton.classList.add("active");
+        targetContent.classList.add("active");
+        targetContent.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+});
+
 // Hamburger Menu JavaScript
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -124,9 +144,9 @@ if (hamburgerBtn) {
 
 // ===== CONTACT FORM HANDLER =====
 document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.getElementById("contactForm");
-  
-  if (contactForm) {
+    const contactForm = document.getElementById("contactForm");
+    
+    if (contactForm) {
     // Form Validation
     const validateForm = () => {
         let isValid = true;
@@ -279,25 +299,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     }
 });
-
-// ===== BACK-TO-TOP BUTTON =====
-const backToTopBtn = document.getElementById("backToTopBtn");
-
-// Show/hide back-to-top button on scroll
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-    backToTopBtn.classList.add("show");
-    } else {
-    backToTopBtn.classList.remove("show");
-    }
-});
-
-// Smooth scroll to top
-if (backToTopBtn) {
-    backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-    });
-}

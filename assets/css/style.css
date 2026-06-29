@@ -3608,3 +3608,9 @@ footer {
     font-size: 20px;
   }
 }
+
+.strip-garis{
+  width: 100%;
+  height: 5px;
+  background-color: var(--emas);
+}
